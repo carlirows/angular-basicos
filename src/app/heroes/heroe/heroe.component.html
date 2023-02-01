@@ -1,0 +1,44 @@
+<h1>{{encabezado}}</h1>
+<dl>
+    <td>Nombre:</td>
+    <dd>{{nombre.toUpperCase()}}</dd>
+
+    <td>Raza:</td>
+    <dd>{{raza}}</dd>
+
+    <td>Edad:</td>
+    <dd>{{edad}}</dd>
+    <br>
+    <td>Fuerza:</td>
+    <dd>{{fuerza}}</dd>
+    <small *ngIf="fuerza === 12 || fuerza === 13">+1</small>
+    <small *ngIf="fuerza === 14 || fuerza === 15">+2</small>
+    <small *ngIf="fuerza === 16 || fuerza === 17">+3</small>
+    <small *ngIf="fuerza === 18 || fuerza === 19">+4</small>
+    <small *ngIf="fuerza === 20 || fuerza === 21">+5</small>
+    <small *ngIf="fuerza === 22 || fuerza === 23">+6</small>
+    <br>
+    <td>Inteligencia:</td>
+    <dd>{{inteligencia}}</dd>
+    <br>
+    <td>Destreza:</td>
+    <dd>{{destreza}}</dd>
+    <br>
+    <td>Sabiduria:</td>
+    <dd>{{sabiduria}}</dd>
+    <br>
+    <td>Constitucion:</td>
+    <dd>{{constitucion}}</dd>
+    <br>
+    <td>Carisma:</td>
+    <dd>{{carisma}}</dd>
+    <br>
+    <h2>Lanza un Dado</h2>
+    <p>Elige el número de caras</p>
+    <input type="text" #carasDado>
+    <br>
+    <br>
+    <button (click)="throwDice(carasDado.value)">Lanzalo</button>
+    <br>    
+    <p>tu resultado es: {{d20}}</p>
+</dl>
