@@ -1,0 +1,21 @@
+<h3>Agregar <small>{{ nuevo.nombre }}</small></h3>
+<hr>
+
+<form (ngSubmit)="agregar()">
+    <!-- cuando uso [()] llaves y dentro parentesis digo que quiero escuchar y emitir el evento 
+    tambien estoy diciendo que el valor del evento se lo quiero agregar a nuevo.nombre
+    -->
+    <input 
+        type="text" 
+        placeholder="Nombre"
+        name="nombre"
+        [(ngModel)]="nuevo.nombre"
+    >
+    <input 
+        type="number" 
+        placeholder="Experiencia"
+        name="experiencia"
+        [(ngModel)]="nuevo.experiencia"
+    >
+    <button type="submit">Agregar</button>
+</form>
